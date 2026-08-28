@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дома у реки — аренда домов на берегу Москва-реки, 15 км от Коломны</title>
+<meta name="description" content="Посуточная аренда двух комфортных домов на высоком берегу Москва-реки в деревне Елино, 15 км от исторического центра Коломны. Панорамные окна, сауна, камин, гриль Big Green Egg.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f4; --bg-alt:#f1ece3; --text:#26241f; --muted:#6b675e;
+  --accent:#2e5e78; --accent-dark:#234a5f; --wood:#b98d5f; --white:#fff;
+  --shadow:0 12px 40px rgba(38,36,31,.12); --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Prata',serif;font-weight:400;line-height:1.25}
+h2{font-size:clamp(26px,3.6vw,40px);margin-bottom:14px}
+.kicker{display:block;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+section{padding:84px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.lead{color:var(--muted);max-width:640px;font-size:17px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:15px 34px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.03em;transition:.25s;border:none;cursor:pointer}
+.btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.15)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;padding:18px 0}
+header .wrap{display:flex;align-items:center;gap:28px}
+header.solid{background:rgba(250,248,244,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(38,36,31,.08);padding:10px 0}
+.logo{font-family:'Prata',serif;font-size:19px;letter-spacing:.06em;color:#fff;white-space:nowrap}
+header.solid .logo{color:var(--text)}
+nav{display:flex;gap:22px;margin-left:auto}
+nav a{color:rgba(255,255,255,.9);font-size:14px;font-weight:600}
+header.solid nav a{color:var(--text)}
+nav a:hover{color:var(--wood)}
+.head-phone{color:#fff;font-weight:700;font-size:14px;white-space:nowrap}
+header.solid .head-phone{color:var(--text)}
+.head-cta{background:var(--wood);color:#fff;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:700;white-space:nowrap}
+.burger{display:none;margin-left:auto;background:none;border:none;cursor:pointer;width:34px;height:26px;position:relative;z-index:60}
+.burger span{position:absolute;left:0;width:100%;height:3px;background:#fff;border-radius:2px;transition:.3s}
+header.solid .burger span{background:var(--text)}
+.burger span:nth-child(1){top:2px}.burger span:nth-child(2){top:12px}.burger span:nth-child(3){top:22px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;padding:0}
+.hero::before{content:"";position:absolute;inset:0;background:url("assets/img/hero.jpg") center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,25,30,.35) 0%,rgba(20,25,30,.04) 42%,rgba(15,20,26,.55) 78%,rgba(15,20,26,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:90px}
+.hero-card{max-width:820px}
+.hero h1{font-size:clamp(30px,4.6vw,54px);text-shadow:0 2px 10px rgba(0,0,0,.55),0 8px 40px rgba(0,0,0,.45)}
+.hero p{margin:18px 0 30px;font-size:clamp(16px,2vw,20px);max-width:560px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* booking */
+#booking{background:var(--bg-alt);padding:64px 0}
+#hr-widget{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:10px;min-height:220px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.about-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.about-photos img:not(:first-child){aspect-ratio:4/3}
+.about-photos img{border-radius:var(--radius);height:100%;object-fit:cover;box-shadow:var(--shadow)}
+.about-photos img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}
+.feature{background:#fff;border-radius:var(--radius);padding:26px 22px;box-shadow:0 6px 24px rgba(38,36,31,.07)}
+.feature .ic{font-size:28px;margin-bottom:10px}
+.feature h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
+.feature p{font-size:14px;color:var(--muted)}
+
+/* houses */
+.house{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-top:44px}
+.house .gal{position:relative;min-height:420px}
+.house .gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+.house .gal img.on{opacity:1}
+.gal-nav{position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:3}
+.gal-nav button{width:9px;height:9px;border-radius:50%;border:none;background:rgba(255,255,255,.55);cursor:pointer;padding:0}
+.gal-nav button.on{background:#fff;transform:scale(1.25)}
+.gal-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,.85);border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text)}
+.gal-arrow:hover{background:#fff}
+.gal-arrow.prev{left:14px}.gal-arrow.next{right:14px}
+.house .info{padding:44px 46px;display:flex;flex-direction:column}
+.house h3{font-size:26px;margin-bottom:6px}
+.house .meta{color:var(--muted);font-size:14px;margin-bottom:18px}
+.house ul{list-style:none;margin:0 0 22px}
+.house li{padding-left:26px;position:relative;margin-bottom:9px;font-size:15px}
+.house li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+.price-row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.price{font-family:'Prata',serif;font-size:26px}
+.price small{font-family:'Manrope',sans-serif;font-size:13px;color:var(--muted);display:block;margin-top:2px}
+.note{font-size:13px;color:var(--muted);margin-top:14px;border-left:3px solid var(--wood);padding-left:12px}
+
+/* veranda band */
+.band{position:relative;color:#fff;padding:110px 0}
+.band::before{content:"";position:absolute;inset:0;background:url("assets/img/band-evening.jpg") center/cover no-repeat}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,30,36,.78) 0%,rgba(22,30,36,.25) 70%)}
+.band .wrap{position:relative;z-index:2}
+.band h2{color:#fff}
+.band .kicker{color:#e8c9a0}
+.band ul{list-style:none;margin-top:20px;max-width:520px}
+.band li{padding-left:30px;position:relative;margin-bottom:12px;font-size:16px}
+.band li::before{content:"—";position:absolute;left:0;color:#e8c9a0}
+
+/* video */
+#video{background:var(--bg);text-align:center}
+.video-frame{max-width:400px;margin:38px auto 0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.video-frame video{width:100%;display:block}
+
+/* inside chips */
+.inside-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.inside{background:#fff;border-radius:var(--radius);padding:26px 24px;box-shadow:0 6px 24px rgba(38,36,31,.07)}
+.inside h3{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.inside ul{list-style:none}
+.inside li{font-size:14px;color:var(--muted);margin-bottom:8px;padding-left:18px;position:relative}
+.inside li::before{content:"·";position:absolute;left:2px;color:var(--wood);font-weight:900;font-size:20px;line-height:1}
+
+/* rules */
+.rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.rule{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:0 6px 24px rgba(38,36,31,.06)}
+.rule b{display:block;margin-bottom:6px;font-size:15px}
+.rule span{font-size:14px;color:var(--muted)}
+
+/* activities */
+.act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.act{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 24px rgba(38,36,31,.07);display:flex;flex-direction:column}
+.act>img{width:100%;height:180px;object-fit:cover}
+.act-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.act h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px}
+.act p{font-size:14px;color:var(--muted)}
+.act .dist{margin-top:auto;padding-top:12px;font-size:13px;font-weight:700;color:var(--accent)}
+
+/* contacts */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.contact-card p{margin-bottom:16px}
+.contact-card a.big{font-family:'Prata',serif;font-size:24px;display:block;margin-bottom:6px}
+.contact-card .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:22px 0 6px}
+.map-box{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;background:var(--bg-alt)}
+.map-box iframe{width:100%;height:100%;border:0}
+
+footer{background:#211f1a;color:#a9a496;padding:38px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(15,15,15,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:30px}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:88vh;border-radius:8px}
+.lb button{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+
+@media(max-width:960px){
+  .about-grid,.house,.contact-grid{grid-template-columns:1fr}
+  .feature-row,.inside-cols{grid-template-columns:repeat(2,1fr)}
+  .act-grid,.rules-grid{grid-template-columns:repeat(2,1fr)}
+  .house .gal{min-height:300px}
+  .house .info{padding:30px 26px}
+  nav,.head-phone{display:none}
+  .burger{display:block}
+  nav.open{display:flex;position:fixed;inset:0;background:rgba(33,31,26,.97);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:55}
+  nav.open a{color:#fff;font-size:20px}
+  section{padding:60px 0}
+}
+@media(max-width:560px){
+  .feature-row,.inside-cols,.act-grid,.rules-grid{grid-template-columns:1fr}
+  .head-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top">ДОМА&nbsp;У&nbsp;РЕКИ</a>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <nav id="nav">
+      <a href="#about">О месте</a>
+      <a href="#houses">Дома</a>
+      <a href="#inside">Что внутри</a>
+      <a href="#rules">Условия</a>
+      <a href="#activities">Чем заняться</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="head-phone" href="tel:+79990373820">+7&nbsp;999&nbsp;037-38-20</a>
+    <a class="head-cta" href="#booking">Забронировать</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-card">
+      <h1>Дома на высоком берегу Москва-реки</h1>
+      <p>Посуточная аренда двух комфортных домов с панорамными окнами в деревне Елино — всего в 15&nbsp;км от исторического центра Коломны</p>
+      <div class="cta-row">
+        <a class="btn" href="#booking">Забронировать онлайн</a>
+        <a class="btn ghost" href="#houses">Посмотреть дома</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <span class="kicker">Бронирование</span>
+    <h2>Выберите даты и дом</h2>
+    <p class="lead" style="margin-bottom:28px">Актуальные цены и свободные даты — в календаре. Оплата и подтверждение онлайн.</p>
+    <div id="hr-widget"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="kicker">О месте</span>
+        <h2>Тишина, река и&nbsp;закаты с&nbsp;веранды</h2>
+        <p class="lead" style="margin-bottom:18px">Наши дома стоят на высоком берегу Москва-реки: из панорамных окон, с веранды и прямо из спальни открывается вид на воду и заливные луга.</p>
+        <p class="lead" style="margin-bottom:18px">Это идеальное место, чтобы совместить активный и уединённый отдых в любое время года. Интерьеры сделаны по дизайн-проекту, а всё в доме — интуитивно просто и продумано до мелочей.</p>
+        <p class="lead">Отлично подходит для семейных выходных, романтического уикенда, празднования особых моментов, ретритов и медитаций.</p>
+      </div>
+      <div class="about-photos">
+        <img src="assets/img/about-1.jpg" alt="Кресла на берегу Москва-реки" class="zoom">
+        <img src="assets/img/pool.jpg" alt="Бассейн на участке" class="zoom">
+        <img src="assets/img/veranda-reading.jpg" alt="Чтение на веранде с видом на реку" class="zoom">
+        <img src="assets/img/sauna-family.jpg" alt="Банный день в сауне" class="zoom" style="object-position:50% 18%">
+        <img src="assets/img/evening-table.jpg" alt="Вечер на веранде с гирляндами" class="zoom">
+      </div>
+    </div>
+    <div class="feature-row">
+      <div class="feature"><div class="ic">🌅</div><h3>Вид на реку</h3><p>Панорамные окна и веранда с креслами прямо над берегом Москва-реки</p></div>
+      <div class="feature"><div class="ic">🏊</div><h3>Бассейн</h3><p>Сезонный бассейн на участке — с видом на реку и берёзы</p></div>
+      <div class="feature"><div class="ic">🧖</div><h3>Сауна</h3><p>Собственная сауна в маленьком доме — идеально после прогулки у воды</p></div>
+      <div class="feature"><div class="ic">🔥</div><h3>Камин и костровая</h3><p>Печь-камин в гостиной и костровая зона с креслами для вечеров у огня</p></div>
+      <div class="feature"><div class="ic">🍖</div><h3>Гриль Big Green Egg</h3><p>Легендарный керамический гриль на веранде и мангальная зона</p></div>
+      <div class="feature"><div class="ic">🐕</div><h3>Pet-friendly</h3><p>Можно с собаками — по согласованию с менеджером</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="houses" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <span class="kicker">Наши дома</span>
+    <h2>Два дома на одной террасе</h2>
+    <p class="lead">Можно снимать отдельно или вместе — общая вместимость 8&nbsp;+&nbsp;2 гостя. Дома соединены деревянной террасой и живут как одно пространство для большой компании.</p>
+
+    <div class="house">
+      <div class="gal" data-gal>
+        <img src="assets/img/house1-ext.jpg" class="on" alt="Большой дом — экстерьер">
+        <img src="assets/img/h1-dining.jpg" alt="Кухня-гостиная с синей стеной">
+        <img src="assets/img/h1-living.jpg" alt="Гостиная с камином и диваном">
+        <img src="assets/img/h1-kitchen.jpg" alt="Кухня большого дома">
+        <img src="assets/img/h1-fireplace.jpg" alt="Печь-камин">
+        <img src="assets/img/h1-bedroom1.jpg" alt="Спальня с видом на реку">
+        <img src="assets/img/h1-bedroom2.jpg" alt="Вторая спальня">
+        <img src="assets/img/h1-kids.jpg" alt="Детская с двухъярусной кроватью">
+        <img src="assets/img/h1-bath.jpg" alt="Ванная комната">
+        <button class="gal-arrow prev" aria-label="Назад">‹</button>
+        <button class="gal-arrow next" aria-label="Вперёд">›</button>
+        <div class="gal-nav"></div>
+      </div>
+      <div class="info">
+        <h3>Большой дом</h3>
+        <div class="meta">120 м² · 4 комнаты · до 8 гостей</div>
+        <ul>
+          <li>2 просторные спальни с кроватями 160×200 и видом на реку</li>
+          <li>Детская с двухъярусной кроватью, игрушками и кроваткой-манежем</li>
+          <li>Огромная кухня-гостиная: камин, диван у панорамного окна, Smart&nbsp;TV, колонка «Алиса»</li>
+          <li>Посудомоечная машина, индукционная плита, кофеварка — кухня укомплектована полностью</li>
+          <li>Кондиционер, стиральная машина, Wi-Fi по оптоволокну</li>
+        </ul>
+        <div class="price-row">
+          <div class="price">от 12 000 ₽<small>за сутки (2 гостя), доп. гость +1500 ₽</small></div>
+          <a class="btn" href="#booking">Забронировать</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="house">
+      <div class="info">
+        <h3>Маленький дом с сауной</h3>
+        <div class="meta">42 м² · 1 комната · 2 гостя (+ младенец)</div>
+        <ul>
+          <li>Собственная сауна</li>
+          <li>Кухня-гостиная с панорамным окном и кондиционером</li>
+          <li>Проектор с большим экраном — домашний кинотеатр</li>
+          <li>Удобный диван для сна двух гостей, кроватка-манеж для младенца</li>
+          <li>Кухня укомплектована всем необходимым</li>
+        </ul>
+        <div class="price-row">
+          <div class="price">от 8 500 ₽<small>за сутки</small></div>
+          <a class="btn" href="#booking">Забронировать</a>
+        </div>
+        <p class="note">Отдельное бронирование маленького дома — только в будни, через менеджера. Использование только сауны обговаривается дополнительно.</p>
+      </div>
+      <div class="gal" data-gal>
+        <img src="assets/img/house2-ext.jpg" class="on" alt="Маленький дом с верандой">
+        <img src="assets/img/h2-living.jpg" alt="Гостиная с гамаком">
+        <img src="assets/img/h2-projector.jpg" alt="Проектор и экран">
+        <img src="assets/img/h2-kitchen.jpg" alt="Кухня маленького дома">
+        <img src="assets/img/h2-sauna.jpg" alt="Сауна">
+        <img src="assets/img/h2-bath.jpg" alt="Душевая">
+        <button class="gal-arrow prev" aria-label="Назад">‹</button>
+        <button class="gal-arrow next" aria-label="Вперёд">›</button>
+        <div class="gal-nav"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <span class="kicker">Веранда и территория</span>
+    <h2>Вечера на веранде<br>над рекой</h2>
+    <ul>
+      <li>Веранда с креслами и шикарным видом на реку</li>
+      <li>Сезонный бассейн на участке</li>
+      <li>Керамический гриль Big Green Egg и мангальная зона (шампура — наши, уголь и решётку привезите с собой)</li>
+      <li>Костровая зона с гирляндами: маршмеллоу, дымные ломти хлеба и созерцание огня</li>
+      <li>Парковка на 2 машины на участке</li>
+      <li>Самостоятельное заселение по key box — удобно и быстро</li>
+    </ul>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <span class="kicker">Видео</span>
+    <h2>Минута из жизни на берегу</h2>
+    <p class="lead" style="margin:0 auto">Посмотрите, как выглядят дома, веранда и река вживую.</p>
+    <div class="video-frame">
+      <video controls playsinline preload="metadata" poster="assets/img/video-poster.jpg">
+        <source src="assets/video/elino.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="inside" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <span class="kicker">Что внутри</span>
+    <h2>Всё, чтобы вы чувствовали себя как дома</h2>
+    <div class="inside-cols">
+      <div class="inside"><h3>🍳 Кухня</h3><ul>
+        <li>Индукционная плита, СВЧ, холодильник с морозилкой</li>
+        <li>Посудомоечная машина с капсулами</li>
+        <li>Гейзерная кофеварка, чайник</li>
+        <li>Посуда для готовки и сервировки, бокалы</li>
+        <li>Чай, кофе, сахар, соль, специи, масло</li>
+      </ul></div>
+      <div class="inside"><h3>🛋 Комфорт</h3><ul>
+        <li>Smart TV и колонка «Алиса»</li>
+        <li>Быстрый Wi-Fi (оптоволокно)</li>
+        <li>Кондиционеры</li>
+        <li>Настольные игры и библиотека</li>
+        <li>Печь-камин</li>
+      </ul></div>
+      <div class="inside"><h3>🛁 Ванная</h3><ul>
+        <li>Полотенца на каждого гостя</li>
+        <li>Постельное бельё</li>
+        <li>Гель, шампунь, мыло, фен</li>
+        <li>Стиральная машина, утюг</li>
+        <li>Горячая вода — бойлер</li>
+      </ul></div>
+      <div class="inside"><h3>🧸 Детям</h3><ul>
+        <li>Детская комната с игрушками</li>
+        <li>Двухъярусная кровать</li>
+        <li>Кроватка-манеж для младенца</li>
+        <li>Батут, верёвочный городок и гамак на участке</li>
+        <li>Настольные и развивающие игры</li>
+        <li>Дети до 1 года — бесплатно</li>
+      </ul></div>
+    </div>
+    <p class="note" style="max-width:640px;margin-top:26px">С собой стоит взять: угли и розжиг для мангала, дрова для костровой зоны, тапочки и обувь для сауны. Вода — из скважины, есть кувшинный фильтр; питьевую можно привезти свою.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <span class="kicker">Условия проживания</span>
+    <h2>Коротко о правилах</h2>
+    <div class="rules-grid">
+      <div class="rule"><b>🕔 Заезд и выезд</b><span>Заезд после 17:00, выезд до 12:00. Ранний заезд и поздний выезд — по договорённости.</span></div>
+      <div class="rule"><b>🔑 Заселение</b><span>Самостоятельное, по key box. Никого ждать не нужно.</span></div>
+      <div class="rule"><b>💰 Депозит</b><span>Страховой депозит 10 000 ₽, возвращается после уборки.</span></div>
+      <div class="rule"><b>👨‍👩‍👧 Гости</b><span>Цена на 2 гостей, доп. гость +1500 ₽. Указывайте общее число гостей, включая детей.</span></div>
+      <div class="rule"><b>🐕 Питомцы</b><span>Проживание с собаками — по согласованию, 3000 ₽ за собаку на весь период.</span></div>
+      <div class="rule"><b>🚭 Курение и тишина</b><span>Курение — только на улице. После 22:00 соблюдаем режим тишины.</span></div>
+    </div>
+    <p class="note" style="margin-top:26px">Проведение мероприятий и профессиональных фото- и видеосъёмок — на отдельных условиях, обсудите с менеджером. <a href="rules.html" style="color:var(--accent);font-weight:700">Полные правила проживания →</a></p>
+  </div>
+</section>
+
+<section id="activities" style="background:var(--bg-alt)">
+  <div class="wrap">
+    <span class="kicker">Чем заняться</span>
+    <h2>Природа, Коломна и&nbsp;гастро-впечатления рядом</h2>
+    <div class="act-grid">
+      <div class="act"><img src="assets/img/act-kremlin.jpg" alt="Коломенский кремль с высоты" loading="lazy"><div class="act-body"><h3>Коломенский кремль и музеи</h3><p>Кремль, музей пастилы, «Калачная», музей трамваев, «Кузнечная слобода» и десятки атмосферных мест старой Коломны.</p><div class="dist">15 км · 20 минут на машине</div></div></div>
+      <div class="act"><img src="assets/img/act-sup.jpg" alt="Сап-сплав по реке" loading="lazy"><div class="act-body"><h3>Сапсёрфинг и вейк-парк</h3><p>Сап-прогулки по рекам с видом на кремль (Suptravel, Sup Time) и водная база «Вейк-парк на Волне».</p><div class="dist">Коломна и окрестности</div></div></div>
+      <div class="act"><img src="assets/img/act-horse.jpg" alt="Конная прогулка по лесу" loading="lazy"><div class="act-body"><h3>Конный клуб «Кино-кони»</h3><p>Конные прогулки по лесам и полям для всей семьи, деревня Конев-Бор.</p><div class="dist">рядом с Елино</div></div></div>
+      <div class="act"><img src="assets/img/act-beach.jpg" alt="Речка и пляж у Черкизово" loading="lazy"><div class="act-body"><h3>Пляж и карьеры</h3><p>Песчаный пляж у села Черкизово и живописные карьеры в Песках — купание и прогулки у воды.</p><div class="dist">10–15 минут на машине</div></div></div>
+      <div class="act"><img src="assets/img/act-farm.jpg" alt="Семейная ферма" loading="lazy"><div class="act-body"><h3>Фермы и экодеревушка</h3><p>«Коза в сарафане», ягодная ферма «Мишкина поляна», Экодеревушка с крокодиловой фермой — детям точно понравится.</p><div class="dist">Коломенский округ</div></div></div>
+      <div class="act"><img src="assets/img/act-fly.jpg" alt="Полёт над поймой рек" loading="lazy"><div class="act-body"><h3>Полёты над Коломной</h3><p>Экскурсионные полёты с аэродрома Северка и авиацентра «Воскресенск»: кремль и поймы рек с высоты.</p><div class="dist">с. Мячково</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="kicker">Контакты</span>
+        <h2>Ждём вас в гости</h2>
+        <div class="lbl">Телефоны</div>
+        <a class="big" href="tel:+79990373820">+7 999 037-38-20</a>
+        <a class="big" href="tel:+79957882704">+7 995 788-27-04</a>
+        <div class="lbl">Telegram</div>
+        <p><a href="https://t.me/domaUreki" target="_blank" rel="noopener">t.me/domaUreki — канал с новостями и полезной информацией</a></p>
+        <div class="lbl">Адрес</div>
+        <p>Московская область, городской округ Коломна, деревня Елино<br>Бесплатная парковка на участке</p>
+        <a class="btn" href="#booking" style="margin-top:10px">Забронировать</a>
+      </div>
+      <div class="map-box">
+        <iframe src="https://yandex.ru/map-widget/v1/?ol=biz&oid=201861995868&z=13" title="Дома у реки на карте" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>«Дома у реки» · деревня Елино, Коломна</div>
+    <div><a href="rules.html" style="text-decoration:underline">Правила проживания</a> · <a href="privacy.html" style="text-decoration:underline">Политика обработки персональных данных</a></div>
+    <div>ИП Новикова Мария Геннадьевна · ОГРНИП 324508100624221 · ИНН 502243749350</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><button aria-label="Закрыть">×</button><img alt=""></div>
+
+<div id="hr-anchor"></div>
+<script type="module" src="https://homereserve.ru/widget.js"></script>
+<script type="module">
+  window.homereserve.initWidgetList({"token":"2yLtgFCFCq"});
+</script>
+
+<script>
+// header
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>60),{passive:true});
+// burger
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.onclick=()=>nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+// galleries
+document.querySelectorAll('[data-gal]').forEach(gal=>{
+  const imgs=[...gal.querySelectorAll('img')],navBox=gal.querySelector('.gal-nav');
+  let i=0;
+  imgs.forEach((_,k)=>{const b=document.createElement('button');b.onclick=()=>show(k);navBox.append(b)});
+  const dots=[...navBox.children];
+  function show(k){i=(k+imgs.length)%imgs.length;imgs.forEach((im,j)=>im.classList.toggle('on',j===i));dots.forEach((d,j)=>d.classList.toggle('on',j===i))}
+  gal.querySelector('.prev').onclick=()=>show(i-1);
+  gal.querySelector('.next').onclick=()=>show(i+1);
+  show(0);
+  let t=setInterval(()=>show(i+1),5000);
+  gal.addEventListener('pointerenter',()=>clearInterval(t));
+});
+// lightbox
+const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+document.querySelectorAll('.zoom').forEach(im=>im.style.cursor='zoom-in');
+document.addEventListener('click',e=>{
+  if(e.target.classList.contains('zoom')){lbImg.src=e.target.src;lb.classList.add('open')}
+  else if(e.target.closest('#lb')){lb.classList.remove('open')}
+});
+</script>
+</body>
+</html>
