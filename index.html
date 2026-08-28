@@ -181,8 +181,8 @@ header.solid .burger span{background:var(--text)}
 @media(max-width:760px){.prog-pane.on{grid-template-columns:1fr}}
 
 /* lead modal */
-.lead{position:fixed;inset:0;background:rgba(15,15,15,.6);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
-.lead.open{display:flex}
+.lead-modal{position:fixed;inset:0;background:rgba(15,15,15,.6);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
+.lead-modal.open{display:flex}
 .lead-box{background:#fff;border-radius:20px;max-width:430px;width:100%;padding:34px 32px;position:relative}
 .lead-box h3{font-size:22px;margin-bottom:8px}
 .lead-box p{font-size:14px;color:var(--muted);margin-bottom:18px}
@@ -581,7 +581,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </footer>
 
-<div class="lead" id="lead">
+<div class="lead-modal" id="lead">
   <div class="lead-box">
     <button class="lead-close" aria-label="Закрыть">×</button>
     <div class="lead-form">
