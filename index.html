@@ -182,14 +182,20 @@ header.solid .burger span{background:var(--text)}
 .prog-tabs button{border:1.5px solid var(--accent);background:transparent;color:var(--accent);padding:10px 22px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:.25s}
 .prog-tabs button.on{background:var(--accent);color:#fff}
 .prog-pane{display:none;background:var(--bg);border-radius:18px;padding:34px 36px;box-shadow:0 6px 24px rgba(38,36,31,.06)}
-.prog-pane.on{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.prog-pane.on{display:block}
 .prog-day b{display:block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--wood);margin-bottom:12px}
 .prog-day ul{list-style:none}
 .prog-day li{padding-left:24px;position:relative;margin-bottom:10px;font-size:15px}
 .prog-day li::before{content:"—";position:absolute;left:0;color:var(--accent)}
-.prog-cta{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #e5dfd2;padding-top:22px}
-.prog-cta span{font-size:14px;color:var(--muted)}
-@media(max-width:760px){.prog-pane.on{grid-template-columns:1fr}}
+.pslide{display:none;min-height:250px}
+.pslide.on{display:block}
+.pslide.pcta.on{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
+.pslide.pcta h3{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700}
+.pslide.pcta span{font-size:14px;color:var(--muted);max-width:340px}
+.pnav{display:flex;align-items:center;gap:14px;margin-top:22px;border-top:1px solid #e5dfd2;padding-top:18px}
+.pnav button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--accent);background:#fff;color:var(--accent);font-size:17px;cursor:pointer}
+.pnav button:hover{background:var(--accent);color:#fff}
+.pnav .plabel{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 
 /* lead modal */
 .lead-modal{position:fixed;inset:0;background:rgba(15,15,15,.6);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
@@ -517,50 +523,50 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     </div>
 
     <div class="prog-pane on" id="prog-pairs">
-      <div class="prog-day"><b>День 1 · Романтика старой Коломны</b><ul>
+      <div class="pslide on"><div class="prog-day"><b>День 1 · Романтика старой Коломны</b><ul>
         <li>Коломенский кремль и прогулка по пешеходному посаду</li>
         <li>Музей любимой игрушки — путешествие в детство</li>
         <li>Музей-резиденция «Арткоммуналка. Ерофеев и другие»</li>
         <li>Ужин в чешском ресторане «Рульки вверх»</li>
-      </ul></div>
-      <div class="prog-day"><b>День 2 · Медленное утро у реки</b><ul>
+      </ul></div></div>
+      <div class="pslide"><div class="prog-day"><b>День 2 · Медленное утро у реки</b><ul>
         <li>Завтрак на веранде с видом на Москва-реку</li>
         <li>«Ресторация в доме купчихи Морозовой»</li>
         <li>Музей-мастерская скульптора Николая Абакумцева в Песках</li>
         <li>Вечер вдвоём: сауна, костровая зона и звёзды над рекой</li>
-      </ul></div>
-      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+      </ul></div></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
 
     <div class="prog-pane" id="prog-active">
-      <div class="prog-day"><b>День 1 · Кони и небо</b><ul>
+      <div class="pslide on"><div class="prog-day"><b>День 1 · Кони и небо</b><ul>
         <li>Конная прогулка в клубе «Кино-кони» (Конев-Бор)</li>
         <li>Экскурсионный полёт над Коломной с аэродрома Северка</li>
         <li>Обед в рыбном ресторане «Сибас-ловелас»</li>
         <li>Ужин в кафе «Марфа Соломоновна»</li>
-      </ul></div>
-      <div class="prog-day"><b>День 2 · Вода и дорога</b><ul>
+      </ul></div></div>
+      <div class="pslide"><div class="prog-day"><b>День 2 · Вода и дорога</b><ul>
         <li>Сап-прогулка по реке с видом на кремль или вейк-парк</li>
         <li>Велопрогулка по полевым дорогам вдоль Москва-реки</li>
         <li>Купание: пляж у Черкизово или карьеры в Песках</li>
         <li>Финал дня — сауна и шашлык на мангальной зоне</li>
-      </ul></div>
-      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+      </ul></div></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
 
     <div class="prog-pane" id="prog-family">
-      <div class="prog-day"><b>День 1 · Сказочная Коломна</b><ul>
+      <div class="pslide on"><div class="prog-day"><b>День 1 · Сказочная Коломна</b><ul>
         <li>Коломенский кремль: прогулка или интерактивная экскурсия</li>
         <li>Обед в семейном кафе «Добрый торт»</li>
         <li>Музей-лавка «Душистыя радости»</li>
-      </ul></div>
-      <div class="prog-day"><b>День 2 · Звери и пастила</b><ul>
+      </ul></div></div>
+      <div class="pslide"><div class="prog-day"><b>День 2 · Звери и пастила</b><ul>
         <li>Экодеревушка в Парфентьево: животные и крокодиловая ферма</li>
         <li>Музейная фабрика коломенской пастилы с костюмированной экскурсией</li>
         <li>Ужин в ресторане «Дом с мезонином»</li>
         <li>Вечер у нас: батут, верёвочный городок и маршмеллоу на костре</li>
-      </ul></div>
-      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+      </ul></div></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
     </div>
     <aside class="pdf-flip">
@@ -678,6 +684,18 @@ document.querySelectorAll('.prog-tabs button').forEach(b=>{
     document.querySelectorAll('.prog-tabs button').forEach(x=>x.classList.toggle('on',x===b));
     document.querySelectorAll('.prog-pane').forEach(p=>p.classList.toggle('on',p.id==='prog-'+b.dataset.prog));
   };
+});
+// слайдер День 1 → День 2 → Скачать PDF внутри каждой программы
+document.querySelectorAll('.prog-pane').forEach(pane=>{
+  const slides=[...pane.querySelectorAll('.pslide')];
+  const labels=['День 1','День 2','Скачать гайд'];
+  let i=0;
+  const nav=document.createElement('div');nav.className='pnav';
+  nav.innerHTML='<button aria-label="Назад">‹</button><span class="plabel"></span><button aria-label="Вперёд">›</button>';
+  pane.append(nav);
+  const [prev,next]=nav.querySelectorAll('button'),label=nav.querySelector('.plabel');
+  function show(k){i=Math.max(0,Math.min(slides.length-1,k));slides.forEach((s,j)=>s.classList.toggle('on',j===i));label.textContent=labels[i]+` · ${i+1}/${slides.length}`;prev.style.visibility=i?'visible':'hidden';next.style.visibility=i<slides.length-1?'visible':'hidden'}
+  prev.onclick=()=>show(i-1);next.onclick=()=>show(i+1);show(0);
 });
 // pdf flipper
 (()=>{
