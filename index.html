@@ -3,8 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дома у реки — аренда домов на берегу Москва-реки, 15 км от Коломны</title>
-<meta name="description" content="Посуточная аренда двух комфортных домов на высоком берегу Москва-реки в деревне Елино, 15 км от исторического центра Коломны. Панорамные окна, сауна, камин, гриль Big Green Egg.">
+<title>Дома у реки — снять дом посуточно у Коломны, на берегу Москва-реки, с сауной</title>
+<meta name="description" content="Снять дом на выходные в Подмосковье: два дома с панорамными окнами на высоком берегу Москва-реки, 15 км от центра Коломны. Сауна, бассейн, камин, мангальная зона, верёвочный городок для детей. Онлайн-бронирование посуточно.">
+<meta property="og:title" content="Дома у реки — аренда домов на берегу Москва-реки у Коломны">
+<meta property="og:description" content="Два дома с панорамными окнами, сауной и бассейном на высоком берегу Москва-реки. 15 км от Коломны. Онлайн-бронирование.">
+<meta property="og:image" content="https://lizagurina.github.io/doma-u-reki/assets/img/hero.jpg">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Дома у реки",
+  "description": "Посуточная аренда двух домов с сауной и панорамными окнами на берегу Москва-реки, 15 км от Коломны",
+  "address": {"@type": "PostalAddress", "addressLocality": "деревня Елино", "addressRegion": "Московская область", "addressCountry": "RU"},
+  "telephone": "+7 999 037-38-20",
+  "priceRange": "8500–17000 RUB",
+  "petsAllowed": true,
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Сауна"},
+    {"@type": "LocationFeatureSpecification", "name": "Сезонный бассейн"},
+    {"@type": "LocationFeatureSpecification", "name": "Мангальная зона"},
+    {"@type": "LocationFeatureSpecification", "name": "Детская площадка"},
+    {"@type": "LocationFeatureSpecification", "name": "Wi-Fi"}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
@@ -77,6 +100,9 @@ header.solid .burger span{background:var(--text)}
 .feature{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 24px rgba(38,36,31,.07);transition:.3s}
 .feature:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(38,36,31,.13)}
 .feature>img{width:100%;height:170px;object-fit:cover}
+.feature.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.35fr;align-items:center}
+.feature.wide>img{height:100%;min-height:230px}
+@media(max-width:760px){.feature.wide{display:block}}
 .feature-body{padding:20px 22px 24px}
 .feature h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
 .feature p{font-size:14px;color:var(--muted)}
@@ -141,6 +167,35 @@ header.solid .burger span{background:var(--text)}
 .act h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px}
 .act p{font-size:14px;color:var(--muted)}
 .act .dist{margin-top:auto;padding-top:12px;font-size:13px;font-weight:700;color:var(--accent)}
+
+/* programs slider */
+#programs{background:#fff}
+.prog-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 26px}
+.prog-tabs button{border:1.5px solid var(--accent);background:transparent;color:var(--accent);padding:10px 22px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:.25s}
+.prog-tabs button.on{background:var(--accent);color:#fff}
+.prog-pane{display:none;background:var(--bg);border-radius:18px;padding:34px 36px;box-shadow:0 6px 24px rgba(38,36,31,.06)}
+.prog-pane.on{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.prog-day b{display:block;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--wood);margin-bottom:12px}
+.prog-day ul{list-style:none}
+.prog-day li{padding-left:24px;position:relative;margin-bottom:10px;font-size:15px}
+.prog-day li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.prog-cta{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #e5dfd2;padding-top:22px}
+.prog-cta span{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.prog-pane.on{grid-template-columns:1fr}}
+
+/* lead modal */
+.lead{position:fixed;inset:0;background:rgba(15,15,15,.6);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
+.lead.open{display:flex}
+.lead-box{background:#fff;border-radius:20px;max-width:430px;width:100%;padding:34px 32px;position:relative}
+.lead-box h3{font-size:22px;margin-bottom:8px}
+.lead-box p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.lead-box input[type=text],.lead-box input[type=tel]{width:100%;padding:13px 16px;border:1.5px solid #ddd6c8;border-radius:12px;font:inherit;font-size:15px;margin-bottom:12px;background:var(--bg)}
+.lead-box label{display:flex;gap:9px;font-size:12.5px;color:var(--muted);margin:6px 0 16px;align-items:flex-start;line-height:1.45}
+.lead-box label a{color:var(--accent);text-decoration:underline}
+.lead-box .btn{width:100%}
+.lead-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:var(--muted);cursor:pointer}
+.lead-ok{display:none;text-align:center;padding:16px 0}
+.lead-ok .big{font-size:40px;margin-bottom:10px}
 
 /* contacts */
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
@@ -234,10 +289,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <figure><img src="assets/img/pool.jpg" alt="Бассейн на участке" class="zoom"><figcaption>Бассейн на участке</figcaption></figure>
         <figure><img src="assets/img/veranda-reading.jpg" alt="Чтение на веранде с видом на реку" class="zoom"><figcaption>Утро на веранде</figcaption></figure>
         <figure><img src="assets/img/sauna-family.jpg" alt="Банный день в сауне" class="zoom" style="object-position:50% 18%"><figcaption>Банный день</figcaption></figure>
-        <figure><img src="assets/img/evening-table.jpg" alt="Вечер на веранде с гирляндами" class="zoom"><figcaption>Вечер над рекой</figcaption></figure>
+        <figure><img src="assets/img/evening-lights.jpg" alt="Вечер под гирляндами у костровой зоны" class="zoom"><figcaption>Вечер над рекой</figcaption></figure>
       </div>
     </div>
     <div class="feature-row">
+      <div class="feature wide"><img src="assets/img/river-view.jpg" alt="Вид на Москва-реку" loading="lazy"><div class="feature-body"><h3>Вид на реку</h3><p>Панорамные окна и веранда с креслами прямо над берегом Москва-реки — вода и заливные луга видны из гостиной, спальни и даже из гамака</p></div></div>
       <div class="feature"><img src="assets/img/feat-play.jpg" alt="Верёвочный городок на участке" loading="lazy"><div class="feature-body"><h3>Верёвочный городок и гамак</h3><p>Детский верёвочный городок, гамак и батут с видом на реку — прямо на участке</p></div></div>
       <div class="feature"><img src="assets/img/feat-pool.jpg" alt="Бассейн на участке" loading="lazy" style="object-position:50% 65%"><div class="feature-body"><h3>Бассейн</h3><p>Сезонный бассейн на участке — с видом на реку и берёзы</p></div></div>
       <div class="feature"><img src="assets/img/h2-sauna.jpg" alt="Сауна" loading="lazy"><div class="feature-body"><h3>Сауна</h3><p>Собственная сауна в маленьком доме — идеально после прогулки у воды</p></div></div>
@@ -430,7 +486,67 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section id="contacts">
+<section id="programs">
+  <div class="wrap">
+    <span class="kicker">Готовые маршруты</span>
+    <h2>Коломна. Программа для&nbsp;вас</h2>
+    <p class="lead">Мы составили три готовые двухдневные программы по Коломне и окрестностям — выбирайте свою и ни о чём не думайте.</p>
+    <div class="prog-tabs">
+      <button class="on" data-prog="pairs">Для пар</button>
+      <button data-prog="active">Для спортивных и активных</button>
+      <button data-prog="family">Для семей с детьми</button>
+    </div>
+
+    <div class="prog-pane on" id="prog-pairs">
+      <div class="prog-day"><b>День 1 · Романтика старой Коломны</b><ul>
+        <li>Коломенский кремль и прогулка по пешеходному посаду</li>
+        <li>Музей любимой игрушки — путешествие в детство</li>
+        <li>Музей-резиденция «Арткоммуналка. Ерофеев и другие»</li>
+        <li>Ужин в чешском ресторане «Рульки вверх»</li>
+      </ul></div>
+      <div class="prog-day"><b>День 2 · Медленное утро у реки</b><ul>
+        <li>Завтрак на веранде с видом на Москва-реку</li>
+        <li>«Ресторация в доме купчихи Морозовой»</li>
+        <li>Музей-мастерская скульптора Николая Абакумцева в Песках</li>
+        <li>Вечер вдвоём: сауна, костровая зона и звёзды над рекой</li>
+      </ul></div>
+      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+    </div>
+
+    <div class="prog-pane" id="prog-active">
+      <div class="prog-day"><b>День 1 · Кони и небо</b><ul>
+        <li>Конная прогулка в клубе «Кино-кони» (Конев-Бор)</li>
+        <li>Экскурсионный полёт над Коломной с аэродрома Северка</li>
+        <li>Обед в рыбном ресторане «Сибас-ловелас»</li>
+        <li>Ужин в кафе «Марфа Соломоновна»</li>
+      </ul></div>
+      <div class="prog-day"><b>День 2 · Вода и дорога</b><ul>
+        <li>Сап-прогулка по реке с видом на кремль или вейк-парк</li>
+        <li>Велопрогулка по полевым дорогам вдоль Москва-реки</li>
+        <li>Купание: пляж у Черкизово или карьеры в Песках</li>
+        <li>Финал дня — сауна и шашлык на мангальной зоне</li>
+      </ul></div>
+      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+    </div>
+
+    <div class="prog-pane" id="prog-family">
+      <div class="prog-day"><b>День 1 · Сказочная Коломна</b><ul>
+        <li>Коломенский кремль: прогулка или интерактивная экскурсия</li>
+        <li>Обед в семейном кафе «Добрый торт»</li>
+        <li>Музей-лавка «Душистыя радости»</li>
+      </ul></div>
+      <div class="prog-day"><b>День 2 · Звери и пастила</b><ul>
+        <li>Экодеревушка в Парфентьево: животные и крокодиловая ферма</li>
+        <li>Музейная фабрика коломенской пастилы с костюмированной экскурсией</li>
+        <li>Ужин в ресторане «Дом с мезонином»</li>
+        <li>Вечер у нас: батут, верёвочный городок и маршмеллоу на костре</li>
+      </ul></div>
+      <div class="prog-cta"><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" style="background:var(--bg-alt)">
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-card">
@@ -459,6 +575,28 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div>ИП Новикова Мария Геннадьевна · ОГРНИП 324508100624221 · ИНН 502243749350</div>
   </div>
 </footer>
+
+<div class="lead" id="lead">
+  <div class="lead-box">
+    <button class="lead-close" aria-label="Закрыть">×</button>
+    <div class="lead-form">
+      <h3>Гайд по Коломне — в подарок</h3>
+      <p>Оставьте телефон — пришлём PDF с тремя готовыми программами, а ещё будем присылать скидки и спецпредложения для гостей.</p>
+      <form id="lead-f">
+        <input type="text" name="name" placeholder="Имя" autocomplete="name">
+        <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required autocomplete="tel">
+        <label><input type="checkbox" required checked><span>Соглашаюсь с <a href="privacy.html" target="_blank">политикой обработки персональных данных</a></span></label>
+        <button class="btn" type="submit">Получить гайд</button>
+      </form>
+    </div>
+    <div class="lead-ok">
+      <div class="big">🎁</div>
+      <h3>Спасибо!</h3>
+      <p>Гайд уже скачивается. Ждём вас в гости!</p>
+      <a class="btn" href="assets/guide-kolomna.pdf" download>Скачать ещё раз</a>
+    </div>
+  </div>
+</div>
 
 <div class="lb" id="lb"><button aria-label="Закрыть">×</button><img alt=""></div>
 
@@ -503,6 +641,28 @@ document.querySelectorAll('[data-gal]').forEach(gal=>{
   show(0);
   let t=setInterval(()=>show(i+1),5000);
   gal.addEventListener('pointerenter',()=>clearInterval(t));
+});
+// programs tabs
+document.querySelectorAll('.prog-tabs button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('.prog-tabs button').forEach(x=>x.classList.toggle('on',x===b));
+    document.querySelectorAll('.prog-pane').forEach(p=>p.classList.toggle('on',p.id==='prog-'+b.dataset.prog));
+  };
+});
+// lead modal
+// LEAD_ENDPOINT: вставить адрес приёма заявок (например https://formsubmit.co/ajax/ВАШ@EMAIL)
+const LEAD_ENDPOINT='';
+const lead=document.getElementById('lead');
+document.querySelectorAll('.lead-open-btn').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();lead.classList.add('open')}));
+lead.querySelector('.lead-close').onclick=()=>lead.classList.remove('open');
+lead.addEventListener('click',e=>{if(e.target===lead)lead.classList.remove('open')});
+document.getElementById('lead-f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.target, data={name:f.name.value,phone:f.phone.value,source:'гайд по Коломне'};
+  if(LEAD_ENDPOINT){fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)}).catch(()=>{})}
+  lead.querySelector('.lead-form').style.display='none';
+  lead.querySelector('.lead-ok').style.display='block';
+  const a=document.createElement('a');a.href='assets/guide-kolomna.pdf';a.download='Гайд по Коломне — Дома у реки.pdf';document.body.append(a);a.click();a.remove();
 });
 // lightbox
 const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
