@@ -115,6 +115,8 @@ header.solid .burger span{background:var(--text)}
 .gal-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(255,255,255,.85);border:none;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text)}
 .gal-arrow:hover{background:#fff}
 .gal-arrow.prev{left:14px}.gal-arrow.next{right:14px}
+.gal-cap{position:absolute;left:14px;bottom:12px;z-index:3;background:rgba(15,18,22,.55);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;pointer-events:none}
+.house .gal img{cursor:zoom-in}
 .house .info{padding:44px 46px;display:flex;flex-direction:column}
 .house h3{font-size:26px;margin-bottom:6px}
 .house .meta{color:var(--muted);font-size:14px;margin-bottom:18px}
@@ -326,22 +328,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
     <div class="house">
       <div class="gal" data-gal>
-        <img src="assets/img/h1-kitchen.jpg" class="on" alt="Кухня большого дома с обеденным столом">
-        <img src="assets/img/h1-kitchen2.jpg" alt="Кухня-гостиная с синей стеной">
-        <img src="assets/img/h1-dining.jpg" alt="Столовая с синей стеной">
-        <img src="assets/img/h1-dining-wide.jpg" alt="Столовая и гостиная с видом на реку">
-        <img src="assets/img/h1-living.jpg" alt="Гостиная с камином и диваном">
-        <img src="assets/img/h1-living-stove.jpg" alt="Гостиная с печью и панорамным окном на реку">
-        <img src="assets/img/h1-fireplace.jpg" alt="Печь-камин">
-        <img src="assets/img/house1-ext.jpg" alt="Большой дом — экстерьер">
-        <img src="assets/img/h1-bedroom1.jpg" alt="Спальня с видом на реку">
-        <img src="assets/img/h1-bedroom-view.jpg" alt="Кровать напротив панорамного окна с рекой">
-        <img src="assets/img/h1-bedroom2.jpg" alt="Вторая спальня">
-        <img src="assets/img/h1-bedroom3.jpg" alt="Спальня с рабочим столом и синими шторами">
-        <img src="assets/img/h1-wardrobe.jpg" alt="Спальня со встроенным шкафом">
-        <img src="assets/img/h1-kids.jpg" alt="Детская с двухъярусной кроватью">
-        <img src="assets/img/h1-bath.jpg" alt="Ванная комната">
-        <img src="assets/img/h1-bath2.jpg" alt="Ванная: раковина и стеллаж с полотенцами">
+        <img src="assets/img/h1-kitchen.jpg" class="on" alt="Кухня большого дома с обеденным столом" data-cap="Кухня-гостиная">
+        <img src="assets/img/h1-kitchen2.jpg" alt="Кухня-гостиная с синей стеной" data-cap="Кухня и гостиная">
+        <img src="assets/img/h1-dining.jpg" alt="Столовая с синей стеной" data-cap="Столовая">
+        <img src="assets/img/h1-dining-wide.jpg" alt="Столовая и гостиная с видом на реку" data-cap="Столовая и гостиная">
+        <img src="assets/img/h1-living.jpg" alt="Гостиная с камином и диваном" data-cap="Гостиная">
+        <img src="assets/img/h1-living-stove.jpg" alt="Гостиная с печью и панорамным окном на реку" data-cap="Гостиная с печью">
+        <img src="assets/img/h1-fireplace.jpg" alt="Печь-камин" data-cap="Печь-камин">
+        <img src="assets/img/house1-ext.jpg" alt="Большой дом — экстерьер" data-cap="Дом снаружи">
+        <img src="assets/img/h1-bedroom1.jpg" alt="Спальня с видом на реку" data-cap="Первая спальня">
+        <img src="assets/img/h1-bedroom-view.jpg" alt="Кровать напротив панорамного окна с рекой" data-cap="Первая спальня — вид на реку">
+        <img src="assets/img/h1-bedroom2.jpg" alt="Вторая спальня" data-cap="Вторая спальня">
+        <img src="assets/img/h1-bedroom3.jpg" alt="Спальня с рабочим столом и синими шторами" data-cap="Вторая спальня — рабочий стол">
+        <img src="assets/img/h1-wardrobe.jpg" alt="Спальня со встроенным шкафом" data-cap="Спальня и гардероб">
+        <img src="assets/img/h1-kids.jpg" alt="Детская с двухъярусной кроватью" data-cap="Детская">
+        <img src="assets/img/h1-bath.jpg" alt="Ванная комната" data-cap="Ванная">
+        <img src="assets/img/h1-bath2.jpg" alt="Ванная: раковина и стеллаж с полотенцами" data-cap="Ванная">
         <button class="gal-arrow prev" aria-label="Назад">‹</button>
         <button class="gal-arrow next" aria-label="Вперёд">›</button>
         <div class="gal-nav"></div>
@@ -381,14 +383,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <p class="note">Отдельное бронирование маленького дома — только в будни, через менеджера. Использование только сауны обговаривается дополнительно.</p>
       </div>
       <div class="gal" data-gal>
-        <img src="assets/img/h2-living-wide.jpg" class="on" alt="Кухня-гостиная с подвесным креслом">
-        <img src="assets/img/h2-living.jpg" alt="Гостиная с гамаком">
-        <img src="assets/img/h2-projector.jpg" alt="Проектор и экран">
-        <img src="assets/img/h2-kitchen-wide.jpg" alt="Кухня с дверью в сауну">
-        <img src="assets/img/h2-kitchen.jpg" alt="Кухня маленького дома">
-        <img src="assets/img/h2-sauna.jpg" alt="Сауна">
-        <img src="assets/img/h2-bath-full.jpg" alt="Ванная комната">
-        <img src="assets/img/h2-bath.jpg" alt="Душевая">
+        <img src="assets/img/h2-living-wide.jpg" class="on" alt="Кухня-гостиная с подвесным креслом" data-cap="Кухня-гостиная">
+        <img src="assets/img/h2-living.jpg" alt="Гостиная с гамаком" data-cap="Гостиная с гамаком">
+        <img src="assets/img/h2-projector.jpg" alt="Проектор и экран" data-cap="Домашний кинотеатр">
+        <img src="assets/img/h2-kitchen-wide.jpg" alt="Кухня с дверью в сауну" data-cap="Кухня и вход в сауну">
+        <img src="assets/img/h2-kitchen.jpg" alt="Кухня маленького дома" data-cap="Кухня">
+        <img src="assets/img/h2-sauna.jpg" alt="Сауна" data-cap="Сауна">
+        <img src="assets/img/h2-bath-full.jpg" alt="Ванная комната" data-cap="Ванная">
+        <img src="assets/img/h2-bath.jpg" alt="Душевая" data-cap="Душевая">
         <button class="gal-arrow prev" aria-label="Назад">‹</button>
         <button class="gal-arrow next" aria-label="Вперёд">›</button>
         <div class="gal-nav"></div>
@@ -671,12 +673,16 @@ document.querySelectorAll('[data-gal]').forEach(gal=>{
   let i=0;
   imgs.forEach((_,k)=>{const b=document.createElement('button');b.onclick=()=>show(k);navBox.append(b)});
   const dots=[...navBox.children];
-  function show(k){i=(k+imgs.length)%imgs.length;imgs.forEach((im,j)=>im.classList.toggle('on',j===i));dots.forEach((d,j)=>d.classList.toggle('on',j===i))}
+  const cap=document.createElement('div');cap.className='gal-cap';gal.append(cap);
+  function show(k){i=(k+imgs.length)%imgs.length;imgs.forEach((im,j)=>im.classList.toggle('on',j===i));dots.forEach((d,j)=>d.classList.toggle('on',j===i));cap.textContent=imgs[i].dataset.cap||''}
   gal.querySelector('.prev').onclick=()=>show(i-1);
   gal.querySelector('.next').onclick=()=>show(i+1);
   show(0);
   let t=setInterval(()=>show(i+1),5000);
   gal.addEventListener('pointerenter',()=>clearInterval(t));
+  gal.addEventListener('click',e=>{
+    if(e.target.tagName==='IMG'){lbImg.src=imgs[i].src;lb.classList.add('open')}
+  });
 });
 // programs tabs
 document.querySelectorAll('.prog-tabs button').forEach(b=>{
