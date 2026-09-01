@@ -82,7 +82,7 @@ header.solid .burger span{background:var(--text)}
 .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 
 /* booking */
-#booking{background:var(--bg-alt);padding:64px 0}
+#booking{background:var(--bg);padding:64px 0}
 #hr-widget{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:10px;min-height:220px}
 
 /* about */
@@ -228,7 +228,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .lb{position:fixed;inset:0;background:rgba(15,15,15,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:30px}
 .lb.open{display:flex}
 .lb img{max-width:92vw;max-height:88vh;border-radius:8px}
-.lb button{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+.lb .lb-close{position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:34px;cursor:pointer}
+.lb-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.16);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:24px;cursor:pointer;display:none;align-items:center;justify-content:center}
+.lb-arrow:hover{background:rgba(255,255,255,.32)}
+.lb.multi .lb-arrow{display:flex}
+.lb-arrow.prev{left:18px}.lb-arrow.next{right:18px}
 
 @media(max-width:960px){
   .about-grid,.house,.contact-grid{grid-template-columns:1fr}
@@ -245,6 +249,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:560px){
   .feature-row,.inside-cols,.act-grid,.rules-grid{grid-template-columns:1fr}
   .head-cta{display:none}
+  .hero::before{background-position:30% center}
 }
 </style>
 </head>
@@ -278,15 +283,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <a class="btn ghost" href="#houses">Посмотреть дома</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="booking">
-  <div class="wrap">
-    <span class="kicker">Бронирование</span>
-    <h2>Выберите даты и дом</h2>
-    <p class="lead" style="margin-bottom:28px">Актуальные цены и свободные даты — в календаре. Оплата и подтверждение онлайн.</p>
-    <div id="hr-widget"></div>
   </div>
 </section>
 
@@ -339,8 +335,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <img src="assets/img/h1-bedroom1.jpg" alt="Спальня с видом на реку" data-cap="Первая спальня (с видом на реку)">
         <img src="assets/img/h1-bedroom-view.jpg" alt="Кровать напротив панорамного окна с рекой" data-cap="Первая спальня (с видом на реку)">
         <img src="assets/img/h1-wardrobe.jpg" alt="Спальня со встроенным шкафом" data-cap="Первая спальня (с видом на реку)">
-        <img src="assets/img/h1-bedroom2.jpg" alt="Вторая спальня" data-cap="Вторая спальня (с синими шторами)">
-        <img src="assets/img/h1-bedroom3.jpg" alt="Спальня с рабочим столом и синими шторами" data-cap="Вторая спальня (с синими шторами)">
+        <img src="assets/img/h1-bedroom2.jpg" alt="Первая спальня" data-cap="Первая спальня (с видом на реку)">
+        <img src="assets/img/h1-bedroom3.jpg" alt="Вторая спальня с рабочим столом" data-cap="Вторая спальня">
         <img src="assets/img/h1-kids.jpg" alt="Детская с двухъярусной кроватью" data-cap="Детская">
         <img src="assets/img/h1-bath.jpg" alt="Ванная комната" data-cap="Ванная">
         <img src="assets/img/h1-bath2.jpg" alt="Ванная: раковина и стеллаж с полотенцами" data-cap="Ванная">
@@ -396,6 +392,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <div class="gal-nav"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <span class="kicker">Бронирование</span>
+    <h2>Выберите даты и дом</h2>
+    <p class="lead" style="margin-bottom:28px">Актуальные цены и свободные даты — в календаре. Оплата и подтверждение онлайн.</p>
+    <div id="hr-widget"></div>
   </div>
 </section>
 
@@ -636,7 +641,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </div>
 
-<div class="lb" id="lb"><button aria-label="Закрыть">×</button><img alt=""></div>
+<div class="lb" id="lb">
+  <button class="lb-close" aria-label="Закрыть">×</button>
+  <button class="lb-arrow prev" aria-label="Предыдущее фото">‹</button>
+  <img alt="">
+  <button class="lb-arrow next" aria-label="Следующее фото">›</button>
+</div>
 
 <div id="hr-anchor"></div>
 <script type="module" src="https://homereserve.ru/widget.js"></script>
@@ -681,7 +691,7 @@ document.querySelectorAll('[data-gal]').forEach(gal=>{
   let t=setInterval(()=>show(i+1),5000);
   gal.addEventListener('pointerenter',()=>clearInterval(t));
   gal.addEventListener('click',e=>{
-    if(e.target.tagName==='IMG'){lbImg.src=imgs[i].src;lb.classList.add('open')}
+    if(e.target.tagName==='IMG')openLb(imgs.map(im=>im.src),i);
   });
 });
 // programs tabs
@@ -729,12 +739,27 @@ document.getElementById('lead-f').addEventListener('submit',e=>{
   lead.querySelector('.lead-ok').style.display='block';
   const a=document.createElement('a');a.href='assets/guide-kolomna.pdf';a.download='Гайд по Коломне — Дома у реки.pdf';document.body.append(a);a.click();a.remove();
 });
-// lightbox
+// lightbox с листанием
 const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+let lbList=[],lbIdx=0;
+function openLb(list,idx){lbList=list;lbIdx=idx;lbImg.src=lbList[lbIdx];lb.classList.toggle('multi',lbList.length>1);lb.classList.add('open')}
+function lbShow(k){lbIdx=(k+lbList.length)%lbList.length;lbImg.src=lbList[lbIdx]}
+lb.querySelector('.lb-arrow.prev').addEventListener('click',e=>{e.stopPropagation();lbShow(lbIdx-1)});
+lb.querySelector('.lb-arrow.next').addEventListener('click',e=>{e.stopPropagation();lbShow(lbIdx+1)});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='ArrowLeft')lbShow(lbIdx-1);
+  else if(e.key==='ArrowRight')lbShow(lbIdx+1);
+  else if(e.key==='Escape')lb.classList.remove('open');
+});
 document.querySelectorAll('.zoom').forEach(im=>im.style.cursor='zoom-in');
 document.addEventListener('click',e=>{
-  if(e.target.classList.contains('zoom')){lbImg.src=e.target.src;lb.classList.add('open')}
-  else if(e.target.closest('#lb')){lb.classList.remove('open')}
+  if(e.target.classList.contains('zoom')){
+    const grp=e.target.closest('.about-photos,.kids-grid');
+    const group=grp?[...grp.querySelectorAll('img.zoom')]:[e.target];
+    openLb(group.map(im=>im.src),group.indexOf(e.target));
+  }
+  else if(e.target.closest('#lb')&&!e.target.closest('.lb-arrow')){lb.classList.remove('open')}
 });
 </script>
 </body>
