@@ -96,7 +96,7 @@ header.solid .burger span{background:var(--text)}
 .kids-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
 .kids-grid img{aspect-ratio:3/4}
 @media(max-width:960px){.kids-grid{grid-template-columns:repeat(2,1fr)}}
-.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{background:#fff;border-radius:var(--radius);padding:22px 22px 24px;box-shadow:0 6px 24px rgba(38,36,31,.07)}
 .feature .ic{font-size:26px;margin-bottom:10px}
 .feature h3{font-family:'Manrope',sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
@@ -284,6 +284,28 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="kicker">О месте</span>
+        <h2>Тишина, река и&nbsp;закаты с&nbsp;веранды</h2>
+        <p class="lead" style="margin-bottom:18px">Наши дома стоят на высоком берегу Москва-реки: из панорамных окон, с веранды и прямо из спальни открывается вид на воду и заливные луга.</p>
+        <p class="lead" style="margin-bottom:18px">Это идеальное место, чтобы совместить активный и уединённый отдых в любое время года. Интерьеры сделаны по дизайн-проекту, а всё в доме — интуитивно просто и продумано до мелочей.</p>
+        <p class="lead" style="margin-bottom:18px">Отлично подходит для семейных выходных, романтического уикенда, празднования особых моментов, ретритов и медитаций.</p>
+        <p class="lead">Наши гости часто заканчивают день здесь после прогулок по исторической Коломне и музею пастилы: попариться в бане, пожарить мясо на огне, попеть песни у костра — и просто отдохнуть душой.</p>
+      </div>
+      <div class="about-photos">
+        <figure><img src="assets/img/about-1.jpg" alt="Кресла на берегу Москва-реки" class="zoom"><figcaption>Берег Москва-реки</figcaption></figure>
+        <figure><img src="assets/img/pool.jpg" alt="Бассейн на участке" class="zoom"><figcaption>Бассейн на участке</figcaption></figure>
+        <figure><img src="assets/img/veranda-reading.jpg" alt="Чтение на веранде с видом на реку" class="zoom"><figcaption>Утро на веранде</figcaption></figure>
+        <figure><img src="assets/img/sauna-family.jpg" alt="Банный день в сауне" class="zoom" style="object-position:50% 18%"><figcaption>Банный день</figcaption></figure>
+        <figure><img src="assets/img/evening-lights.jpg" alt="Вечер под гирляндами у костровой зоны" class="zoom"><figcaption>Вечер над рекой</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="houses" style="background:var(--bg-alt)">
   <div class="wrap">
     <span class="kicker">Наши дома</span>
@@ -366,25 +388,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   </div>
 </section>
 
-<section id="about">
+<section id="features" style="padding:64px 0">
   <div class="wrap">
-    <div class="about-grid">
-      <div>
-        <span class="kicker">О месте</span>
-        <h2>Тишина, река и&nbsp;закаты с&nbsp;веранды</h2>
-        <p class="lead" style="margin-bottom:18px">Наши дома стоят на высоком берегу Москва-реки: из панорамных окон, с веранды и прямо из спальни открывается вид на воду и заливные луга.</p>
-        <p class="lead" style="margin-bottom:18px">Это идеальное место, чтобы совместить активный и уединённый отдых в любое время года. Интерьеры сделаны по дизайн-проекту, а всё в доме — интуитивно просто и продумано до мелочей.</p>
-        <p class="lead" style="margin-bottom:18px">Отлично подходит для семейных выходных, романтического уикенда, празднования особых моментов, ретритов и медитаций.</p>
-        <p class="lead">Наши гости часто заканчивают день здесь после прогулок по исторической Коломне и музею пастилы: попариться в бане, пожарить мясо на огне, попеть песни у костра — и просто отдохнуть душой.</p>
-      </div>
-      <div class="about-photos">
-        <figure><img src="assets/img/about-1.jpg" alt="Кресла на берегу Москва-реки" class="zoom"><figcaption>Берег Москва-реки</figcaption></figure>
-        <figure><img src="assets/img/pool.jpg" alt="Бассейн на участке" class="zoom"><figcaption>Бассейн на участке</figcaption></figure>
-        <figure><img src="assets/img/veranda-reading.jpg" alt="Чтение на веранде с видом на реку" class="zoom"><figcaption>Утро на веранде</figcaption></figure>
-        <figure><img src="assets/img/sauna-family.jpg" alt="Банный день в сауне" class="zoom" style="object-position:50% 18%"><figcaption>Банный день</figcaption></figure>
-        <figure><img src="assets/img/evening-lights.jpg" alt="Вечер под гирляндами у костровой зоны" class="zoom"><figcaption>Вечер над рекой</figcaption></figure>
-      </div>
-    </div>
     <div class="feature-row">
       <div class="feature"><div class="ic">🧗</div><h3>Верёвочный городок и гамак</h3><p>Детский верёвочный городок, гамак и батут с видом на реку — прямо на участке</p></div>
       <div class="feature"><div class="ic">🏊</div><h3>Бассейн</h3><p>Сезонный бассейн на участке — с видом на реку и берёзы</p></div>
