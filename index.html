@@ -159,6 +159,14 @@ header.solid .burger span{background:var(--text)}
 .act h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;margin-bottom:8px}
 .act p{font-size:14px;color:var(--muted)}
 .act .dist{margin-top:auto;padding-top:12px;font-size:13px;font-weight:700;color:var(--accent)}
+.act-cts{margin-top:10px;border-top:1px solid #eee7da;padding-top:10px}
+.act-cts summary{cursor:pointer;list-style:none;font-size:13px;font-weight:700;color:var(--wood)}
+.act-cts summary::after{content:" ↓"}
+.act-cts[open] summary::after{content:" ↑"}
+.act-cts ul{list-style:none;margin:10px 0 0}
+.act-cts li{font-size:13px;color:var(--muted);margin-bottom:7px;line-height:1.5}
+.act-cts li b{color:var(--text)}
+.act-cts a{color:var(--accent);text-decoration:underline}
 
 /* programs slider */
 #programs{background:#fff}
@@ -516,12 +524,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <span class="kicker">Чем заняться</span>
     <h2>Природа, Коломна и&nbsp;гастро-впечатления рядом</h2>
     <div class="act-grid">
-      <div class="act"><img src="assets/img/act-kremlin.jpg" alt="Коломенский кремль с высоты" loading="lazy"><div class="act-body"><h3>Коломенский кремль и музеи</h3><p>Кремль, музей пастилы, «Калачная», музей трамваев, «Кузнечная слобода» и десятки атмосферных мест старой Коломны.</p><div class="dist">15 км · 20 минут на машине</div></div></div>
-      <div class="act"><img src="assets/img/act-sup.jpg" alt="Сап-сплав по реке" loading="lazy"><div class="act-body"><h3>Сапсёрфинг и вейк-парк</h3><p>Сап-прогулки по рекам с видом на кремль (Suptravel, Sup Time) и водная база «Вейк-парк на Волне».</p><div class="dist">Коломна и окрестности</div></div></div>
-      <div class="act"><img src="assets/img/act-horse.jpg" alt="Конная прогулка по лесу" loading="lazy"><div class="act-body"><h3>Конный клуб «Кино-кони»</h3><p>Конные прогулки по лесам и полям для всей семьи, деревня Конев-Бор.</p><div class="dist">рядом с Елино</div></div></div>
-      <div class="act"><img src="assets/img/act-beach.jpg" alt="Речка и пляж у Черкизово" loading="lazy"><div class="act-body"><h3>Пляж и карьеры</h3><p>Песчаный пляж у села Черкизово и живописные карьеры в Песках — купание и прогулки у воды.</p><div class="dist">10–15 минут на машине</div></div></div>
-      <div class="act"><img src="assets/img/act-farm.jpg" alt="Семейная ферма" loading="lazy"><div class="act-body"><h3>Фермы и экодеревушка</h3><p>«Коза в сарафане», ягодная ферма «Мишкина поляна», Экодеревушка с крокодиловой фермой — детям точно понравится.</p><div class="dist">Коломенский округ</div></div></div>
-      <div class="act"><img src="assets/img/act-fly.jpg" alt="Полёт над поймой рек" loading="lazy"><div class="act-body"><h3>Полёты над Коломной</h3><p>Экскурсионные полёты с аэродрома Северка и авиацентра «Воскресенск»: кремль и поймы рек с высоты.</p><div class="dist">с. Мячково</div></div></div>
+      <div class="act"><img src="assets/img/act-kremlin.jpg" alt="Коломенский кремль с высоты" loading="lazy"><div class="act-body"><h3>Коломенский кремль и музеи</h3><p>Кремль, музей пастилы, «Калачная», музей трамваев, «Кузнечная слобода» и десятки атмосферных мест старой Коломны.</p><div class="dist">15 км · 20 минут на машине<details class="act-cts"><summary>Контакты</summary><ul><li><b>Коломенский кремль</b> — ул. Лажечникова, 5</li><li><b>Музейная фабрика пастилы</b> — ул. Полянская, 4</li><li><b>Музей «Калачная»</b> — ул. Зайцева, 14</li><li><b>Музей любимой игрушки</b> — ул. Москворецкая, 20а</li></ul></details></div></div></div>
+      <div class="act"><img src="assets/img/act-sup.jpg" alt="Сап-сплав по реке" loading="lazy"><div class="act-body"><h3>Сапсёрфинг и вейк-парк</h3><p>Сап-прогулки по рекам с видом на кремль (Suptravel, Sup Time) и водная база «Вейк-парк на Волне».</p><div class="dist">Коломна и окрестности<details class="act-cts"><summary>Контакты</summary><ul><li><b>Suptravel</b> — <a href="tel:+79253123206">+7 925 312-32-06</a>, suptravelkolomna.ru</li><li><b>Sup Time</b> — <a href="tel:+79653459873">+7 965 345-98-73</a>, с. Большое Колычёво</li><li><b>Вейк-парк на Волне</b> — <a href="tel:+79166666228">+7 916 666-62-28</a>, Коломна, район Городищи</li></ul></details></div></div></div>
+      <div class="act"><img src="assets/img/act-horse.jpg" alt="Конная прогулка по лесу" loading="lazy"><div class="act-body"><h3>Конный клуб «Кино-кони»</h3><p>Конные прогулки по лесам и полям для всей семьи, деревня Конев-Бор.</p><div class="dist">рядом с Елино<details class="act-cts"><summary>Контакты</summary><ul><li><b>Запись</b> — <a href="tel:+79262038368">+7 926 203-83-68</a>, vk.com/djigity</li><li>Ежедневно 11:00–16:00, прогулки от 2500 ₽</li></ul></details></div></div></div>
+      <div class="act"><img src="assets/img/act-beach.jpg" alt="Речка и пляж у Черкизово" loading="lazy"><div class="act-body"><h3>Пляж и карьеры</h3><p>Песчаный пляж у села Черкизово и живописные карьеры в Песках — купание и прогулки у воды.</p><div class="dist">10–15 минут на машине<details class="act-cts"><summary>Контакты</summary><ul><li><b>Пляж</b> — с. Черкизово (координаты 55.193877, 38.747997)</li><li><b>Карьеры</b> — СНТ Пески-2, Набережная ул. (55.213702, 38.788517)</li></ul></details></div></div></div>
+      <div class="act"><img src="assets/img/act-farm.jpg" alt="Семейная ферма" loading="lazy"><div class="act-body"><h3>Фермы и экодеревушка</h3><p>«Коза в сарафане», ягодная ферма «Мишкина поляна», Экодеревушка с крокодиловой фермой — детям точно понравится.</p><div class="dist">Коломенский округ<details class="act-cts"><summary>Контакты</summary><ul><li><b>Экодеревушка</b> — <a href="tel:+74951520277">+7 495 152-02-77</a>, с. Парфентьево</li><li><b>«Коза в сарафане»</b> — <a href="tel:+79168111425">+7 916 811-14-25</a>, пос. Первомайский</li><li><b>«Мишкина поляна»</b> — <a href="tel:+79164410565">+7 916 441-05-65</a>, с. Нижнее Хорошово</li></ul></details></div></div></div>
+      <div class="act"><img src="assets/img/act-fly.jpg" alt="Полёт над поймой рек" loading="lazy"><div class="act-body"><h3>Полёты над Коломной</h3><p>Экскурсионные полёты с аэродрома Северка и авиацентра «Воскресенск»: кремль и поймы рек с высоты.</p><div class="dist">с. Мячково<details class="act-cts"><summary>Контакты</summary><ul><li><b>Аэродром Северка</b> — <a href="tel:+79268537307">+7 926 853-73-07</a>, с. Мячково</li><li><b>Авиацентр «Воскресенск»</b> — <a href="tel:+79680896896">+7 968 089-68-96</a>, д. Гостилово</li></ul></details></div></div></div>
     </div>
   </div>
 </section>
