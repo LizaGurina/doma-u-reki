@@ -5,15 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Дома у реки — снять дом посуточно у Коломны, на берегу Москва-реки, с сауной</title>
 <meta name="description" content="Снять дом на выходные в Подмосковье: два дома с панорамными окнами на высоком берегу Москва-реки, 15 км от центра Коломны. Сауна, бассейн, камин, мангальная зона, верёвочный городок для детей. Онлайн-бронирование посуточно.">
+<link rel="canonical" href="https://doma-u-reki.ru/">
+<meta property="og:url" content="https://doma-u-reki.ru/">
+<meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Дома у реки — аренда домов на берегу Москва-реки у Коломны">
 <meta property="og:description" content="Два дома с панорамными окнами, сауной и бассейном на высоком берегу Москва-реки. 15 км от Коломны. Онлайн-бронирование.">
-<meta property="og:image" content="https://lizagurina.github.io/doma-u-reki/assets/img/hero.jpg">
+<meta property="og:image" content="https://doma-u-reki.ru/assets/img/hero.jpg">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "name": "Дома у реки",
+  "url": "https://doma-u-reki.ru/",
+  "image": "https://doma-u-reki.ru/assets/img/hero.jpg",
+  "geo": {"@type": "GeoCoordinates", "latitude": 55.228728, "longitude": 38.746641},
+  "sameAs": ["https://t.me/domaUreki", "https://yandex.ru/maps/org/dom_u_reki/201861995868/"],
   "description": "Посуточная аренда двух домов с сауной и панорамными окнами на берегу Москва-реки, 15 км от Коломны",
   "address": {"@type": "PostalAddress", "addressLocality": "деревня Елино", "addressRegion": "Московская область", "addressCountry": "RU"},
   "telephone": "+7 995 788-27-04",
@@ -199,35 +206,6 @@ header.solid .burger span{background:var(--text)}
 .pnav button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--accent);background:#fff;color:var(--accent);font-size:17px;cursor:pointer}
 .pnav button:hover{background:var(--accent);color:#fff}
 .pnav .plabel{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-
-/* lead modal */
-.lead-modal{position:fixed;inset:0;background:rgba(15,15,15,.6);z-index:110;display:none;align-items:center;justify-content:center;padding:20px}
-.lead-modal.open{display:flex}
-.lead-box{background:#fff;border-radius:20px;max-width:430px;width:100%;padding:34px 32px;position:relative}
-.lead-box h3{font-size:22px;margin-bottom:8px}
-.lead-box p{font-size:14px;color:var(--muted);margin-bottom:18px}
-.lead-box input[type=text],.lead-box input[type=tel]{width:100%;padding:13px 16px;border:1.5px solid #ddd6c8;border-radius:12px;font:inherit;font-size:15px;margin-bottom:12px;background:var(--bg)}
-.lead-box label{display:flex;gap:9px;font-size:12.5px;color:var(--muted);margin:6px 0 16px;align-items:flex-start;line-height:1.45}
-.lead-box label a{color:var(--accent);text-decoration:underline}
-.lead-box .btn{width:100%}
-.lead-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:26px;color:var(--muted);cursor:pointer}
-.lead-ok{display:none;text-align:center;padding:16px 0}
-.lead-ok .big{font-size:40px;margin-bottom:10px}
-
-/* reviews */
-.rev-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:34px}
-.rev-stars{color:#f5a623;font-size:20px;letter-spacing:2px}
-.rev-head a{color:var(--accent);font-weight:700;font-size:14px;text-decoration:underline}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.rev{background:#fff;border-radius:var(--radius);padding:24px 24px 22px;box-shadow:0 6px 24px rgba(38,36,31,.07);display:flex;flex-direction:column}
-a.rev{color:inherit;transition:.25s}
-a.rev:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(38,36,31,.14)}
-.rev .stars{color:#f5a623;font-size:14px;letter-spacing:1px;margin-bottom:10px}
-.rev p{font-size:14.5px;line-height:1.6;color:var(--text);flex:1}
-.rev .who{margin-top:16px;font-size:13px;color:var(--muted)}
-.rev .who b{color:var(--text);font-weight:700}
-@media(max-width:960px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.rev-grid{grid-template-columns:1fr}}
 
 /* contacts */
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
@@ -573,7 +551,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <li>Музей-мастерская скульптора Николая Абакумцева в Песках</li>
         <li>Вечер вдвоём: сауна, костровая зона и звёзды над рекой</li>
       </ul></div></div>
-      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn" href="assets/guide-kolomna.pdf" target="_blank" rel="noopener">Открыть PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
 
     <div class="prog-pane" id="prog-active">
@@ -589,7 +567,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <li>Купание: пляж у Черкизово или карьеры в Песках</li>
         <li>Финал дня — сауна и шашлык на мангальной зоне</li>
       </ul></div></div>
-      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn" href="assets/guide-kolomna.pdf" target="_blank" rel="noopener">Открыть PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
 
     <div class="prog-pane" id="prog-family">
@@ -604,17 +582,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
         <li>Ужин в ресторане «Дом с мезонином»</li>
         <li>Вечер у нас: батут, верёвочный городок и маршмеллоу на костре</li>
       </ul></div></div>
-      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn lead-open-btn" href="#">Скачать PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
+      <div class="pslide pcta"><h3>Понравился маршрут?</h3><a class="btn" href="assets/guide-kolomna.pdf" target="_blank" rel="noopener">Открыть PDF с программой</a><span>Полный гайд: адреса, цены и наши личные советы — бесплатно</span></div>
     </div>
     </div>
     <aside class="pdf-flip">
-      <div class="pdf-page lead-open-btn" id="pdf-page" title="Скачать гайд"></div>
+      <a class="pdf-page" id="pdf-page" href="assets/guide-kolomna.pdf" target="_blank" rel="noopener" title="Открыть гайд"></a>
       <div class="pdf-nav">
         <button id="pdf-prev" aria-label="Предыдущая страница">‹</button>
         <span id="pdf-count">1 / 21</span>
         <button id="pdf-next" aria-label="Следующая страница">›</button>
       </div>
-      <div class="pdf-cap">Полистайте гайд — 21 страница мест, ресторанов и маршрутов</div>
+      <div class="pdf-cap">Полистайте гайд — 21 страница мест, ресторанов и маршрутов. Клик — открыть целиком</div>
     </aside>
     </div>
   </div>
@@ -648,28 +626,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div>ИП Новикова Мария Геннадьевна · ОГРНИП 324508100624221 · ИНН 502243749350</div>
   </div>
 </footer>
-
-<div class="lead-modal" id="lead">
-  <div class="lead-box">
-    <button class="lead-close" aria-label="Закрыть">×</button>
-    <div class="lead-form">
-      <h3>Гайд по Коломне — в подарок</h3>
-      <p>Оставьте телефон — пришлём PDF с тремя готовыми программами, а ещё будем присылать скидки и спецпредложения для гостей.</p>
-      <form id="lead-f">
-        <input type="text" name="name" placeholder="Имя" autocomplete="name">
-        <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required autocomplete="tel">
-        <label><input type="checkbox" required checked><span>Соглашаюсь с <a href="privacy.html" target="_blank">политикой обработки персональных данных</a></span></label>
-        <button class="btn" type="submit">Получить гайд</button>
-      </form>
-    </div>
-    <div class="lead-ok">
-      <div class="big">🎁</div>
-      <h3>Спасибо!</h3>
-      <p>Гайд уже скачивается. Ждём вас в гости!</p>
-      <a class="btn" href="assets/guide-kolomna.pdf" download>Скачать ещё раз</a>
-    </div>
-  </div>
-</div>
 
 <div class="lb" id="lb">
   <button class="lb-close" aria-label="Закрыть">×</button>
@@ -754,21 +710,6 @@ document.querySelectorAll('.prog-pane').forEach(pane=>{
   document.getElementById('pdf-prev').onclick=()=>show(i-1);
   document.getElementById('pdf-next').onclick=()=>show(i+1);
 })();
-// lead modal
-// LEAD_ENDPOINT: вставить адрес приёма заявок (например https://formsubmit.co/ajax/ВАШ@EMAIL)
-const LEAD_ENDPOINT='';
-const lead=document.getElementById('lead');
-document.querySelectorAll('.lead-open-btn').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();lead.classList.add('open')}));
-lead.querySelector('.lead-close').onclick=()=>lead.classList.remove('open');
-lead.addEventListener('click',e=>{if(e.target===lead)lead.classList.remove('open')});
-document.getElementById('lead-f').addEventListener('submit',e=>{
-  e.preventDefault();
-  const f=e.target, data={name:f.name.value,phone:f.phone.value,source:'гайд по Коломне'};
-  if(LEAD_ENDPOINT){fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)}).catch(()=>{})}
-  lead.querySelector('.lead-form').style.display='none';
-  lead.querySelector('.lead-ok').style.display='block';
-  const a=document.createElement('a');a.href='assets/guide-kolomna.pdf';a.download='Гайд по Коломне — Дома у реки.pdf';document.body.append(a);a.click();a.remove();
-});
 // lightbox с листанием
 const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
 let lbList=[],lbIdx=0;

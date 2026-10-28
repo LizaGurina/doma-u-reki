@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doma-u-reki.ru/sitemap.xml
